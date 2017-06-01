@@ -5,28 +5,27 @@ package com.davist.learn.springboot.domain;
 
 /**
  * @author StarovoytovD
- *
  */
 public class Client {
-	
-	private String name;
-	
-	private Integer age;
 
-	public String getName() {
-		return name;
-	}
+    private String name;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private Integer age;
 
-	public Integer getAge() {
-		return age;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setAge(Integer age) {
-		this.age = age;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 
 }
