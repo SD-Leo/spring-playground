@@ -1,7 +1,7 @@
 /**
  * 19 сент. 2015 г.
  */
-package com.davist.learn.springboot.domain;
+package ru.davist.study.spring.domain;
 
 /**
  * @author StarovoytovD

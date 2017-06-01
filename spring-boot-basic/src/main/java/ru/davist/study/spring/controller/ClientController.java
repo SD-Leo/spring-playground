@@ -1,17 +1,15 @@
 /**
  * Sep 19, 2015
  */
-package com.davist.learn.springboot.controller;
+package ru.davist.study.spring.controller;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import ru.davist.study.spring.domain.Client;
 
-import com.davist.learn.springboot.domain.Client;
-
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -28,10 +26,10 @@ public class ClientController {
         StringBuilder response = new StringBuilder();
         response.append("<head></head>");
         response.append("<body>");
-        response.append("<h1>Hello from spring-rest1</h1>");
-        response.append("<p><a href=\"http://localhost:");
-        response.append("8080");
-        response.append("/clients\">Try this</a></p>");
+        response.append("<h1>Hello from spring-rest</h1>");
+        response.append("<p>");
+        response.append("<a href=\"http://localhost:8080/clients\">Try this</a>");
+        response.append("</p>");
         response.append("</body>");
         return response.toString();
     }
@@ -41,10 +39,8 @@ public class ClientController {
     public List<Client> get() {
         Client client = new Client();
         client.setName("John");
-        client.setAge(Integer.valueOf(30));
-        List<Client> clients = new ArrayList<>();
-        clients.add(client);
-        return clients;
+        client.setAge(30);
+        return Collections.singletonList(client);
     }
 
 }
