@@ -3,6 +3,7 @@
  */
 package com.davist.learn.spring;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,7 +31,7 @@ public class ClientRestController {
         return response.toString();
     }
 
-    @RequestMapping(value = "/clients", method = RequestMethod.GET)
+    @GetMapping(value = "/clients")  // альтернатива @RequestMapping(method = RequestMethod.GET)
     public static List<Client> get() {
         Client client = new Client();
         client.setName("John");
